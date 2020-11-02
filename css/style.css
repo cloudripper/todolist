@@ -12,6 +12,9 @@ body {
     background-size: cover;
 }
 
+.table {
+    width: 500px;
+}
 .tableBG {
     background-color:rgba(0,0,0,.5)
 }
@@ -34,11 +37,19 @@ body {
     background-color: rgba(255,255,255,.40);
 }
 
+.taskCompleted {
+    background-color: rgba(140,203,146,.5);
+    
+}
+.taskCompleted:hover {
+    background-color:rgba(26,208,46,.5) !important;
+}
+
 .inputStyle {
     color: white;
     font-weight: 500;
     background-color: rgba(0,0,0,.5);
-    width: 350px;
+    width: 460px;
 }
 #addItem {
     color: #0056b3;
