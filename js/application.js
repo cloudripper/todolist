@@ -18,8 +18,7 @@ $('document').ready(function () {
         target.fadeToggle();
         target.hide(800, function () {
             remTasks(target);
-            itemNumberUpdate();
-        });      
+        });    
     })
 
     $('body').keydown('#inputTask', function(e) {
@@ -51,12 +50,13 @@ $('document').ready(function () {
 var remTasks = function (tr) {
     var taskID = $(tr).children('td.idContainer').text();
     var delURL = 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + taskID + '?api_key=213'
-
+    
     $.ajax({
         type: 'DELETE',
         url: delURL,
         success: function (response, textStatus) {
             console.log(response);
+            startGetTasks();
         },
         error: function (request, textStatus, errorMessage) {
             console.log(errorMessage);
