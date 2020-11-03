@@ -12,8 +12,10 @@ body {
     background-size: cover;
 }
 
-.table {
+.table-wrap {
     width: 500px;
+    height: 500px;
+    overflow-y: auto;
 }
 .tableBG {
     background-color:rgba(0,0,0,.5)
